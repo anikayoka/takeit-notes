@@ -4,10 +4,10 @@ const uuid = require('uuid');
 
 const fs = require('fs');
 
-let notes = require('./db/db.json');
+let notes = require('../db/db.json');
 
 router.get ("/api/notes", (req,res) => {
-  notes = JSON.parse(fs.readFileSync('/db/db.json'))
+  notes = JSON.parse(fs.readFileSync('./db/db.json'))
   res.json(notes)
 })
 
@@ -19,7 +19,7 @@ router.post ("/api/notes", (req,res) => {
   }
   notes.push(newNote)
 
-  fs.writeFileSync('/db/db.json', JSON.stringify(notes),(err,data) => {
+  fs.writeFileSync('./db/db.json', JSON.stringify(notes),(err,data) => {
     if(err) throw err;
   })
   res.json(notes)
@@ -34,7 +34,7 @@ router.delete ("/api/notes/:id", (req,res) => {
  });
   notes=adjustNote
 
-  fs.writeFileSync('/db/db.json', JSON.stringify(notes),(err,data) => {
+  fs.writeFileSync('./db/db.json', JSON.stringify(notes),(err,data) => {
     if(err) throw err;
   })
   res.json(notes)
