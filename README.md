@@ -14,8 +14,8 @@
 
   ## Links
 
-  - [Deployed] (https://floating-shelf-93264.herokuapp.com/notes)
-  - [Github] (https://github.com/anikayoka/takeit-notes)
+  * [Deployed](https://floating-shelf-93264.herokuapp.com/notes)
+  * [Github](https://github.com/anikayoka/takeit-notes)
   
   ## Srcreenshot
   
